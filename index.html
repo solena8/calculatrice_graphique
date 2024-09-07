@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculatrice</title>
+    <link rel="stylesheet" href="calculatrice.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculette">
+        <div class="titresetresultat">
+          <div class="titre">
+            <p class="calculette-title">Ma super calculette</p>
+          </div>
+          <div class="result">
+            <p id="result" class="resultdisplay"></p>
+          </div>
+        </div>
+        <div class="chiffres">
+          <div class="row justify-content-center">
+            <input type="button" id="7" value="7" class="ronds" />
+            <input type="button" id="8" value="8" class="ronds" />
+            <input type="button" id="9" value="9" class="ronds" />
+            <input type="button" id="x" value="x" class="rondsdroite" />
+          </div>
+          <div class="row justify-content-center">
+            <input type="button" id="4" value="4" class="ronds" />
+            <input type="button" id="5" value="5" class="ronds" />
+            <input type="button" id="6" value="6" class="ronds" />
+            <input type="button" id="/" value="/" class="rondsdroite" />
+          </div>
+          <div class="row justify-content-center">
+            <input type="button" id="1" value="1" class="ronds" />
+            <input type="button" id="2" value="2" class="ronds" />
+            <input type="button" id="3" value="3" class="ronds" />
+            <input type="button" id="+" value="+" class="rondsdroite" />
+          </div>
+          <div class="row justify-content-center">
+            <input type="button" id="O" value="0" class="ronds" />
+            <input type="button" id="(" value="(" class="ronds" />
+            <input type="button" id=")" value=")" class="ronds" />
+            <input type="button" id="-" value="-" class="rondsdroite" />
+          </div>
+          <div class="row justify-content-center">
+            <button id="AC_button" class="rondsbas">AC</button>
+            <button id="D_button" class="rondsbas">D</button>
+            <input type="button" id="void" value="" class="void" />
+            <button id="equalButton" class="rondsbas">=</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
