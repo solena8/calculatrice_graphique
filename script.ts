@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function updateDisplay(): void {
-  const resultElement = document.getElementById(
+  const resultElement: HTMLElement = document.getElementById(
     "result"
   ) as HTMLParagraphElement;
   if (resultElement) {
@@ -35,13 +35,13 @@ function updateDisplay(): void {
 }
 
 function displayresult(): void {
-  const resultElement = document.getElementById(
+  const resultElement: HTMLElement = document.getElementById(
     "result"
   ) as HTMLParagraphElement;
 
   if (resultElement) {
     // Convert button values to a string and replace any 'x' with '*' for multiplication
-    const expression = buttonValues.join("").replace(/x/g, "*");
+    const expression: string = buttonValues.join("").replace(/x/g, "*");
 
     try {
       // Evaluate the mathematical expression safely
@@ -55,7 +55,7 @@ function displayresult(): void {
 }
 
 function erraseResult(): void {
-  buttonValues = [];
+  const buttonValues: string[] = [];
   const resultElement = document.getElementById(
     "result"
   ) as HTMLParagraphElement;

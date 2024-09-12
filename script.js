@@ -45,7 +45,7 @@ function displayresult() {
     }
 }
 function erraseResult() {
-    buttonValues = [];
+    var buttonValues = [];
     var resultElement = document.getElementById("result");
     if (resultElement) {
         resultElement.innerText = "";
