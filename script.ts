@@ -40,14 +40,12 @@ function displayresult(): void {
   ) as HTMLParagraphElement;
 
   if (resultElement) {
-    // Convert button values to a string and replace any 'x' with '*' for multiplication
     const expression: string = buttonValues.join("").replace(/x/g, "*");
 
     try {
-      // Evaluate the mathematical expression safely
-      const result = eval(expression); // Caution: Make sure inputs are safe before using eval
+      const result: any = eval(expression);
       resultElement.innerText = result.toString();
-      buttonValues = [result.toString()];
+      buttonValues: [] = [result.toString()];
     } catch (error) {
       resultElement.innerText = "Error";
     }
