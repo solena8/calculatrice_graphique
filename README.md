@@ -1,6 +1,8 @@
 # Ma Super Calculette
 
 ![Calculator Screenshot](./calculette.png)
+<img src="./screenshot.png" alt="Calculator Screenshot" width="50%"/>
+
 
 Ma Super Calculette is a responsive calculator application built using HTML, CSS, and Bootstrap. This project is part of a school exercise at Ada Tech Schoold to practice building user interfaces with web technologies.
 
