@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } else if (buttonValue === "D") {
         buttonValues.pop();
         updateDisplay();
-      } else if (buttonValue !== "D") {
+      } else if (buttonValues.join("").length < 20) {
         buttonValues.push(buttonValue);
         updateDisplay();
       }
@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function updateDisplay(): void {
   const resultElement: HTMLElement = document.getElementById(
-    "result"
-  ) as HTMLParagraphElement;
+    "resultat"
+  ) as HTMLElement;
   if (resultElement) {
     resultElement.innerText = buttonValues.join("");
   }
@@ -36,18 +36,15 @@ function updateDisplay(): void {
 
 function displayresult(): void {
   const resultElement: HTMLElement = document.getElementById(
-    "result"
-  ) as HTMLParagraphElement;
+    "resultat"
+  ) as HTMLElement;
 
   if (resultElement) {
-    // Convert button values to a string and replace any 'x' with '*' for multiplication
     const expression: string = buttonValues.join("").replace(/x/g, "*");
 
     try {
-      // Evaluate the mathematical expression safely
-      const result = eval(expression); // Caution: Make sure inputs are safe before using eval
+      const result: any = eval(expression);
       resultElement.innerText = result.toString();
-      buttonValues = [result.toString()];
     } catch (error) {
       resultElement.innerText = "Error";
     }
@@ -55,10 +52,10 @@ function displayresult(): void {
 }
 
 function erraseResult(): void {
-  const buttonValues: string[] = [];
+  buttonValues = [];
   const resultElement = document.getElementById(
-    "result"
-  ) as HTMLParagraphElement;
+    "resultat"
+  ) as HTMLElement;
   if (resultElement) {
     resultElement.innerText = "";
   }

@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 buttonValues.pop();
                 updateDisplay();
             }
-            else if (buttonValue !== "D") {
+            else if (buttonValues.join("").length < 20) {
                 buttonValues.push(buttonValue);
                 updateDisplay();
             }
@@ -23,21 +23,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 function updateDisplay() {
-    var resultElement = document.getElementById("result");
+    var resultElement = document.getElementById("resultat");
     if (resultElement) {
         resultElement.innerText = buttonValues.join("");
     }
 }
 function displayresult() {
-    var resultElement = document.getElementById("result");
+    var resultElement = document.getElementById("resultat");
     if (resultElement) {
-        // Convert button values to a string and replace any 'x' with '*' for multiplication
         var expression = buttonValues.join("").replace(/x/g, "*");
         try {
-            // Evaluate the mathematical expression safely
-            var result = eval(expression); // Caution: Make sure inputs are safe before using eval
+            var result = eval(expression);
             resultElement.innerText = result.toString();
-            buttonValues = [result.toString()];
         }
         catch (error) {
             resultElement.innerText = "Error";
@@ -45,8 +42,8 @@ function displayresult() {
     }
 }
 function erraseResult() {
-    var buttonValues = [];
-    var resultElement = document.getElementById("result");
+    buttonValues = [];
+    var resultElement = document.getElementById("resultat");
     if (resultElement) {
         resultElement.innerText = "";
     }

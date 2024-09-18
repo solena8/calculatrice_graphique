@@ -3,67 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculatrice</title>
-    <link rel="stylesheet" href="calculatrice.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Calculette</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="calculatrice.css" rel="stylesheet" />
   </head>
   <body>
     <div class="container">
-      <div class="calculette">
-        <div class="titresetresultat">
-          <div class="titre">
-            <p class="calculette-title">Ma super calculette</p>
-          </div>
-          <div class="result">
-            <p id="result" class="resultdisplay"></p>
-          </div>
-        </div>
-        <div class="chiffres">
-          <div class="row justify-content-center">
-            <input type="button" id="7" value="7" class="ronds" />
-            <input type="button" id="8" value="8" class="ronds" />
-            <input type="button" id="9" value="9" class="ronds" />
-            <input type="button" id="x" value="x" class="rondsdroite" />
-          </div>
-          <div class="row justify-content-center">
-            <input type="button" id="4" value="4" class="ronds" />
-            <input type="button" id="5" value="5" class="ronds" />
-            <input type="button" id="6" value="6" class="ronds" />
-            <input type="button" id="/" value="/" class="rondsdroite" />
-          </div>
-          <div class="row justify-content-center">
-            <input type="button" id="1" value="1" class="ronds" />
-            <input type="button" id="2" value="2" class="ronds" />
-            <input type="button" id="3" value="3" class="ronds" />
-            <input type="button" id="+" value="+" class="rondsdroite" />
-          </div>
-          <div class="row justify-content-center">
-            <input type="button" id="O" value="0" class="ronds" />
-            <input type="button" id="(" value="(" class="ronds" />
-            <input type="button" id=")" value=")" class="ronds" />
-            <input type="button" id="-" value="-" class="rondsdroite" />
-          </div>
-          <div class="row justify-content-center">
-            <button id="AC_button" class="rondsbas">AC</button>
-            <button id="D_button" class="rondsbas">D</button>
-            <input type="button" id="void" value="" class="void" />
-            <button id="equalButton" class="rondsbas">=</button>
+      <!-- Utilisation de la grille Bootstrap pour centrer verticalement et horizontalement -->
+      <!-- La classe min-vh-100 assure que la hauteur minimale est égale à la hauteur de la fenêtre -->
+      <div class="row justify-content-center align-items-center min-vh-100">
+        <!-- Utilisation des classes col-lg-4, col-md-6, col-sm-8, col-10 pour la taille de la calculette
+             en fonction de la taille de l'écran. Cela rend la calculette responsive. -->
+        <div class="col-lg-4 col-md-6 col-sm-8 col-10">
+          <!-- Création d'une carte Bootstrap avec des coins arrondis pour la calculette -->
+          <div class="calculator card bg-pink rounded-lg">
+            <div class="card-body">
+              <!-- Titre centré et responsive avec différentes tailles de texte pour petits et grands écrans -->
+              <!-- fs-2 est utilisé pour petits écrans, fs-md-3 pour les écrans moyens -->
+              <h1 class="card-title text-center mb-4 pacifico-regular text-white fs-2 fs-md-3">
+                Ma super calculette
+              </h1>
+              <div class="mb-3">
+                <!-- Zone d'affichage des résultats avec alignement du texte à droite, texte en blanc, et fond gris -->
+                <!-- Utilisation de fs-4 pour la taille du texte et fw-bold pour le rendre gras -->
+                <div
+                  id="resultat"
+                  class="form-control text-end fs-4 fw-bold bg-secondary text-white result-display"
+                ></div>
+              </div>
+              <!-- Disposition des boutons de la calculatrice en grille avec Bootstrap -->
+              <div class="button-grid">
+                <!-- Boutons stylisés avec des classes Bootstrap : btn, btn-light-pink pour la couleur -->
+                <!-- rounded-circle pour les rendre circulaires, fs-4 pour la taille du texte, et m-1 pour la marge -->
+                <button class="btn btn-light-pink rounded-circle fs-4 fw-bold m-1">7</button>
+                <button class="btn btn-light-pink rounded-circle fs-4 fw-bold m-1">8</button>
+                <button class="btn btn-light-pink rounded-circle fs-4 fw-bold m-1">9</button>
+                <button class="btn btn-purple rounded-circle fs-4 fw-bold m-1">x</button>
+
+                <button class="btn btn-light-pink rounded-circle fs-4 fw-bold m-1">4</button>
+                <button class="btn btn-light-pink rounded-circle fs-4 fw-bold m-1">5</button>
+                <button class="btn btn-light-pink rounded-circle fs-4 fw-bold m-1">6</button>
+                <button class="btn btn-purple rounded-circle fs-4 fw-bold m-1">/</button>
+
+                <button class="btn btn-light-pink rounded-circle fs-4 fw-bold m-1">1</button>
+                <button class="btn btn-light-pink rounded-circle fs-4 fw-bold m-1">2</button>
+                <button class="btn btn-light-pink rounded-circle fs-4 fw-bold m-1">3</button>
+                <button class="btn btn-purple rounded-circle fs-4 fw-bold m-1">+</button>
+
+                <button class="btn btn-light-pink rounded-circle fs-4 fw-bold m-1">0</button>
+                <button class="btn btn-light-pink rounded-circle fs-4 fw-bold m-1">(</button>
+                <button class="btn btn-light-pink rounded-circle fs-4 fw-bold m-1">)</button>
+                <button class="btn btn-purple rounded-circle fs-4 fw-bold m-1">-</button>
+
+                <!-- Boutons spéciaux : AC pour effacer, D pour supprimer le dernier caractère, et = pour calculer -->
+                <button id="AC_button" class="btn btn-secondary rounded-circle fs-4 fw-bold m-1">AC</button>
+                <button id="D_button" class="btn btn-secondary rounded-circle fs-4 fw-bold m-1">D</button>
+                <button id="equalButton" class="btn btn-secondary rounded-circle fs-4 fw-bold m-1">=</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Importation de Bootstrap JS pour les fonctionnalités dynamiques et des scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Fichier JavaScript personnalisé pour la calculette -->
     <script src="script.js"></script>
   </body>
 </html>

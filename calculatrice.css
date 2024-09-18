@@ -1,119 +1,50 @@
 .pacifico-regular {
-  font-family: "Pacifico", cursive;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Pacifico", cursive;
 }
 
-.titresetresultat {
-  width: 50vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.bg-pink {
+    background-color: hotpink;
 }
 
-.resultdisplay {
-  margin-right: 4vh;
-  text-align: center;
-  align-items: center;
-  line-height: 10vh; /* Ensures vertical alignment */
+.btn-purple {
+    background-color: rgb(170, 132, 220);
+    color: black;
 }
 
-.chiffres {
-  margin: 3vh;
+.btn-pink {
+    background-color: hotpink;
+  }
+
+.btn-light-pink {
+    background-color: pink;
+    color: black;
 }
 
-.result {
-  width: 50vh;
-  height: 10vh;
-  text-align: center;
-  margin: 1vh;
-  display: flex;
-  justify-content: end;
-  font-size: 4vh;
-  font-weight: bold;
-  color: rgb(0, 0, 0);
+.calculator {
+    max-width: 350px;
+    margin: auto;
+    border-radius: 15px !important;
+    overflow: hidden;
 }
 
-.calculette {
-  border-radius: 3%;
-  height: 90vh;
-  width: 60vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 4vh auto;
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
 }
 
-.calculette-title {
-  margin-top: 3vh;
-  font-size: 5vh;
-  color: white;
-  font-family: "Pacifico", cursive; /* Corrected property */
+.btn {
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    line-height: 60px;
 }
 
-.row {
-  margin: 0; /* Remove default margin on rows */
+.result-display {
+    height: 60px;
+    font-size: 24px !important;
+    background-color: rgb(167, 167, 167) !important;
+    color: black !important;
+    border: none;
 }
 
-#button {
-  border: none;
-}
-
-input[type="button"],
-button {
-  border: none; /* Removes the border */
-  border-radius: 50%;
-  height: 10vh;
-  width: 10vh;
-  text-align: center;
-  margin: 1vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4vh;
-  font-weight: bold;
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-  outline: none; /* Removes the default focus outline */
-  padding: 0; /* Removes any default padding */
-  box-shadow: none; /* Removes any default shadow */
-}
-
-.ronds {
-  background-color: pink; /* Specific color for ronds */
-}
-
-.result,
-.rondsbas {
-  background-color: rgb(167, 167, 167); /* Specific color for rondsbas */
-}
-
-.rondsbas {
-  border: none; /* Removes the border */
-  border-radius: 50%;
-  height: 10vh;
-  width: 10vh;
-  text-align: center;
-  margin: 1vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4vh;
-  font-weight: bold;
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-  outline: none; /* Removes the default focus outline */
-  padding: 0; /* Removes any default padding */
-  box-shadow: none; /* Removes any default shadow */
-}
-
-.void,
-.calculette {
-  background-color: hotpink;
-}
-
-.rondsdroite {
-  background-color: rgb(170, 132, 220); /* Specific color for rondsdroite */
-}
